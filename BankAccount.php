@@ -36,7 +36,7 @@ public function getAccountHolderName(){
 //Creates a setter for the balance property
 public function setBalance($balance){
     if ($balance < 0){
-        trigger_error("Dear " + $this->accountHolderName + " you have insufficient balance in your account", E_USER_ERROR);
+        trigger_error("Dear customer you have insufficient balance in your account", E_USER_ERROR);
     }
     else{
         $this->balance = $balance;
