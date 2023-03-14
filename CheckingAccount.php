@@ -15,7 +15,7 @@ class CheckingAccount extends BankAccount {
     }
 
     //Creates a setter for the Transaction Fee attribute
-    public function setTransac5tionFee($transactionFee){
+    public function setTransactionFee($transactionFee){
         $this->transactionFee = $transactionFee;
     }
 
@@ -24,13 +24,16 @@ class CheckingAccount extends BankAccount {
         return $this->transactionFee;
     }
 
-    //Creates a setter and a getter for the amount
-
+    //Creates a getter for the amount
+    public function getAmount(){
+        return $this->amount;
+    }
 
     //Creates a withdraw method that overrides the withdraw method in the BankAccount class
     public function withdraw($amount){
         $this->amount = $amount;
-        $this->balance - $this->transactionFee;
+        $this->transactionFee = (1/100) * ($this->amount);
+        $this->balance = $this->getBalance() - $this->transactionFee;
         return $this->setBalance($this->balance);
     }
 

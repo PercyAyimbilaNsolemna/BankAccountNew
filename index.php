@@ -1,6 +1,7 @@
 <?php
     require_once("BankAccount.php");
     require_once("SavingsAccount.php");
+    require_once("CheckingAccount.php");
 
     //Creates an object from the BankAccount class
     $bankAccount = new BankAccount();
@@ -77,3 +78,40 @@
     $savingsAccount->addInterest();
 
     echo "Dear customer you have an interest of $" . $savingsAccount->getInterest() . ". Your current balance is $" . $savingsAccount->getBalance() . "<br><br>";
+
+
+    echo "This explores the use of the checking account class" . "<br><br>"; 
+    //Creates an object from the CheckingAccount class
+    $checkingAccount = new CheckingAccount();
+    
+    //Sets the attributes of the class
+    $checkingAccount->setAccountNumber("2390875");
+
+    $checkingAccount->setAccountHolderName("Agnes Adompoka");
+
+    $checkingAccount->setBalance(10000);
+
+    //The transaction fee is automatically set when the withdraw method is called. The transaction fee is based on the amount to withdraw
+    //$checkingAccount->setTransactionFee(20);
+
+    //Outputs the return values of the methods in the CheckingAccount class
+    echo "Account Number: " . $checkingAccount->getAccountnumber() . "<br><br>";
+
+    echo "Account Holder Name: " . $checkingAccount->getAccountHolderName() . "<br><br>";
+
+    echo "Balance: " . $checkingAccount->getBalance() . "<br><br>";
+
+    //Withdrwas an amount of $10
+    $checkingAccount->withdraw(10);
+
+    echo "The transaction fee for withdrawing an amount of $" . $checkingAccount->getAmount(). " is $" . $checkingAccount->getTransactionFee() . "<br><br>";
+
+    echo "Dear customer your current balance after the transaction is " . $checkingAccount->getBalance() . "<br><br>";
+
+    //withdraws an amount of 500 from the account
+    $checkingAccount->withdraw(500);
+
+    echo "The transaction fee for withdrawing an amount of $" . $checkingAccount->getAmount(). " is $" . $checkingAccount->getTransactionFee() . "<br><br>"; 
+    
+    echo "Dear customer your current balance after the transaction is " . $checkingAccount->getBalance() . "<br><br>";
+
