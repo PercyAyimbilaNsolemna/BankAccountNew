@@ -24,9 +24,18 @@
     //Experiments the deposit and withdrawal methods in the BankAccount class 
     $bankAccount->deposit(50);
     
-    echo "Dear customer you haver deposited an amount of $" . $bankAccount->getAmount() . ". Your current Balance is $" . $bankAccount->getBalance() . "<br><br>";
+    echo "Dear customer you have deposited an amount of $" . $bankAccount->getAmount() . ". Your current Balance is $" . $bankAccount->getBalance() . "<br><br>";
 
     $bankAccount->deposit(30);
 
-    echo "Dear customer you haver deposited an amount of $" . $bankAccount->getAmount() . ". Your current Balance is $" . $bankAccount->getBalance() . "<br><br>";
+    echo "Dear customer you have deposited an amount of $" . $bankAccount->getAmount() . ". Your current Balance is $" . $bankAccount->getBalance() . "<br><br>";
 
+    $bankAccount->withdraw(40);
+
+    echo "Dear customer you have withdrawn an amount of $" . $bankAccount->getAmount() . ". Your current Balance is $" . $bankAccount->getBalance() . "<br><br>";
+
+    $bankAccount->withdraw(20);
+
+    echo "Dear customer you have withdrawn an amount of $" . $bankAccount->getAmount() . ". Your current Balance is $" . $bankAccount->getBalance() . "<br><br>";
+
+    //Creates an ob
