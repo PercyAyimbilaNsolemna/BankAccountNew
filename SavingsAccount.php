@@ -23,8 +23,7 @@ class SavingsAccount extends BankAccount{
 
     //Creates a function that calculates the interest rate
     public function addInterest(){
-        $interest = $this->balance * $this->interestRate * 1;
-        $this->balance = $this->interest + $this->balance;
-        return $this->balance;
+        $interest = parent::getBalance() * $this->interestRate * 1;
+        return parent::setBalance($this->interest + parent::getBalance());
     }
 }
