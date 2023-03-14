@@ -3,6 +3,7 @@
     require_once("SavingsAccount.php");
     require_once("CheckingAccount.php");
 
+    echo "This explores the use of the BankAccount class" . "<br><br>";
     //Creates an object from the BankAccount class
     $bankAccount = new BankAccount();
 
@@ -37,8 +38,9 @@
 
     $bankAccount->withdraw(20);
 
-    echo "Dear customer you have withdrawn an amount of $" . $bankAccount->getAmount() . ". Your current Balance is $" . $bankAccount->getBalance() . "<br><br>";
+    echo "Dear customer you have withdrawn an amount of $" . $bankAccount->getAmount() . ". Your current Balance is $" . $bankAccount->getBalance() . "<br><br><br>";
 
+    echo "This explores the use of the SavingsAccount class" . "<br><br>";
     //Creates an object from the SavingsAccount class 
     $savingsAccount = new SavingsAccount();
 
@@ -77,7 +79,7 @@
 
     $savingsAccount->addInterest();
 
-    echo "Dear customer you have an interest of $" . $savingsAccount->getInterest() . ". Your current balance is $" . $savingsAccount->getBalance() . "<br><br>";
+    echo "Dear customer you have an interest of $" . $savingsAccount->getInterest() . ". Your current balance is $" . $savingsAccount->getBalance() . "<br><br><br>";
 
 
     echo "This explores the use of the checking account class" . "<br><br>"; 
