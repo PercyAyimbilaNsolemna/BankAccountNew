@@ -7,7 +7,7 @@ class SavingsAccount extends BankAccount{
     public $interest;
 
     //Creates a constructor method for the SavingsAccount class
-    public function __construct(){
+    public function __construct__(){
         parent::__construct__();
     }
 
