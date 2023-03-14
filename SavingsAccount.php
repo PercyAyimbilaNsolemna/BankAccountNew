@@ -21,9 +21,19 @@ class SavingsAccount extends BankAccount{
         return $this->interestRate;
     }
 
+    //Creates a setter for the interest property
+    public function setInterest($interest){
+        $this->interest = $interest;
+    }
+
+    //Creates a getter for the interest 
+    public function getInterest(){
+        return $this->interest;
+    }
+
     //Creates a function that calculates the interest rate
     public function addInterest(){
-        $interest = parent::getBalance() * $this->interestRate * 1;
-        return parent::setBalance($this->interest + parent::getBalance());
+        $this->interest = $this->getBalance() * ($this->interestRate / 100);
+        return $this->setBalance($this->interest + $this->getBalance());
     }
 }

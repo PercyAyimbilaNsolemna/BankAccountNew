@@ -38,4 +38,42 @@
 
     echo "Dear customer you have withdrawn an amount of $" . $bankAccount->getAmount() . ". Your current Balance is $" . $bankAccount->getBalance() . "<br><br>";
 
-    //Creates an ob
+    //Creates an object from the SavingsAccount class 
+    $savingsAccount = new SavingsAccount();
+
+    //Sets the attributes of the SavingsAccount class
+    echo "This is where the savings Account starts" . "<br><br>";
+
+    $savingsAccount->setAccountNumber("209856");
+
+    $savingsAccount->setAccountHolderName("Percy Ayimbila");
+
+    $savingsAccount->setBalance(30);
+
+    //Outputs the variuos attributes of the class 
+    echo "Account Number: " . $savingsAccount->getAccountNumber() . "<br><br>";
+
+    echo "Account Name: " . $savingsAccount->getAccountHolderName() . "<br><br>";
+
+    echo "Balance: " . $savingsAccount->getBalance() . "<br><br>";
+
+    //Makes some deposits and withdrawals from the bankAccount
+
+    $savingsAccount->deposit(30);
+
+    echo "Dear customer you have deposited an amount of $" . $savingsAccount->getAmount() . ". Your current Balance is $" . $savingsAccount->getBalance() . "<br><br>";
+
+    $savingsAccount->deposit(10);
+
+    echo "Dear customer you have deposited an amount of $" . $savingsAccount->getAmount() . ". Your current Balance is $" . $savingsAccount->getBalance() . "<br><br>";
+
+    $savingsAccount->withdraw(40);
+
+    echo "Dear customer you have withdrawn an amount of $" . $savingsAccount->getAmount() . ". Your current Balance is $" . $savingsAccount->getBalance() . "<br><br>";
+
+    //Uses the methods in the SavingsAccount class to get some few interest for the user 
+    $savingsAccount->setInterestRate(40);
+
+    $savingsAccount->addInterest();
+
+    echo "Dear customer you have an interest of $" . $savingsAccount->getInterest() . ". Your current balance is $" . $savingsAccount->getBalance() . "<br><br>";
